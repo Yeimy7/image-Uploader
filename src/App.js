@@ -1,13 +1,13 @@
-import { ProgressBar } from "./components/ProgressBar";
+import { Container } from "./components/Container";
 import { Upload } from "./components/Upload";
-import { UploadSuccess } from "./components/UploadSuccess";
+import FileState from "./context/fileState";
 
 function App() {
 
   return (
-    <div className="App">
-      <Upload />
-    </div>
+    <FileState>
+      <Container />
+    </FileState>
   );
 }
 

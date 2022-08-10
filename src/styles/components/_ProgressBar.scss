@@ -1,56 +1,51 @@
-.container-bar {
-  width: 400.36px;
-  height: 143.57px;
-  align-items: flex-start;
-  .loader {
-    position: relative;
-    width: 340.71px;
-    height: 6px;
-    background-color: $veryVeryLightGray;
+.loader {
+  position: relative;
+  width: 340.71px;
+  height: 6px;
+  background-color: $veryVeryLightGray;
+  border-radius: 8px;
+  .loader:before {
+    content: "";
+    border: 1px solid $veryDarkBlue;
     border-radius: 8px;
-    .loader:before {
-      content: "";
-      border: 1px solid $veryDarkBlue;
-      border-radius: 8px;
-      position: absolute;
-      top: -4px;
-      right: -4px;
-      bottom: -4px;
-      left: -4px;
-    }
-    .loaderBar {
-      position: absolute;
-      border-radius: 8px;
-      top: 0;
-      right: 100%;
-      bottom: 0;
-      left: 0;
-      background: $veryDarkBlue;
-      width: 0;
-    //   animation: borealisBar 2s linear infinite;
-    }
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+  }
+  .loaderBar {
+    position: absolute;
+    border-radius: 8px;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: $veryDarkBlue;
+    width: 0;
+    animation: borealisBar 2s linear infinite;
+  }
 
-    @keyframes borealisBar {
-      0% {
-        left: 0%;
-        right: 100%;
-        width: 0%;
-      }
-      10% {
-        left: 0%;
-        right: 75%;
-        width: 25%;
-      }
-      90% {
-        right: 0%;
-        left: 75%;
-        width: 25%;
-      }
-      100% {
-        left: 100%;
-        right: 0%;
-        width: 0%;
-      }
+  @keyframes borealisBar {
+    0% {
+      left: 0%;
+      right: 100%;
+      width: 0%;
+    }
+    10% {
+      left: 0%;
+      right: 75%;
+      width: 25%;
+    }
+    90% {
+      right: 0%;
+      left: 75%;
+      width: 25%;
+    }
+    100% {
+      left: 100%;
+      right: 0%;
+      width: 0%;
     }
   }
 }

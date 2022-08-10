@@ -9,8 +9,33 @@
   line-height: 16px;
   font-weight: $bold;
   letter-spacing: -0.035em;
-  
+  transition: all 0.3s ease;
+  &:hover{
+  background-color: $veryDarkBlueHover;
+  }
 }
 .green {
   background-color: $green;
+  &:hover{
+  background-color: $greenHover;
+  }
+}
+.alerta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 3rem;
+  max-width: 500px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  color: $white;
+}
+.alerta-ok {
+  background-color: rgb(109, 211, 109);
+}
+
+.alerta-error {
+  background-color: rgb(230, 78, 78);
 }

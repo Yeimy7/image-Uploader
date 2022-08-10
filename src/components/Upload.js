@@ -1,8 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import upload from '../assets/image.svg'
-import { fileUpload } from '../helpers/fileUpload'
+import { fileContext } from '../context/fileContext'
 
 export const Upload = () => {
+    //Obtener el state de country
+    const filesContext = useContext(fileContext)
+    const { mostrarAlerta, uploadFile, uploadingImage } = filesContext
+
     const wrapperRef = useRef(null)
 
     const [imageFile, setImageFile] = useState(null)
@@ -17,7 +21,8 @@ export const Upload = () => {
             if ((newImage.type).includes('image/')) {
                 setImageFile(newImage)
             } else {
-                alert('The file is not an image, select an image please...')
+                setImageFile(null)
+                mostrarAlerta('The file is not an image, select an image please...', 'alerta-error')
             }
         }
     }
@@ -27,12 +32,13 @@ export const Upload = () => {
     }
 
     const handlePictureUpload = async () => {
-
-        const fileUrl = await fileUpload(imageFile)
-        console.log(fileUrl)
+        uploadingImage()
+        setTimeout(() => {
+            uploadFile(imageFile)
+        }, 2000);
     }
     return (
-        <section className='container'>
+        <>
             <h1 className='title'>Upload your image</h1>
             <h2 className='subtitle'>File should be Jpeg, Png...</h2>
             <section
@@ -53,6 +59,6 @@ export const Upload = () => {
                     <button className='btn' onClick={handlePictureClick}>Choose a file</button>
                 </>
             }
-        </section>
+        </>
     )
 }

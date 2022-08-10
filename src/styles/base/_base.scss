@@ -56,9 +56,10 @@ button {
 .container{
   background-color: $white;
   width: 402px;
-  height: 469px;
+  // height: 469px;
+  padding:2rem;
+  gap: 1.3rem;
   border-radius: 12px;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

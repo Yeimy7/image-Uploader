@@ -16,7 +16,10 @@
   width: 338px;
   height: 224.4px;
   border-radius: 12px;
-  border: 1px solid red;
+  // border: 1px solid red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .wrapperLink {
@@ -40,8 +43,6 @@
     font-weight: $bold;
     font-size: 8px;
     line-height: 12px;
-    /* identical to box height */
-
     text-align: center;
     letter-spacing: -0.035em;
   }
