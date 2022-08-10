@@ -2,11 +2,15 @@
   background-color: $veryDarkBlue;
   border-radius: 8px;
   color: $white;
-  padding: .5rem 1rem;
-  font-family: 'Noto Sans', sans-serif;
+  padding: 0.5rem 1rem;
+  font-family: "Noto Sans", sans-serif;
   cursor: pointer;
   font-size: 12px;
   line-height: 16px;
   font-weight: $bold;
   letter-spacing: -0.035em;
+  
+}
+.green {
+  background-color: $green;
 }

@@ -4,8 +4,8 @@ export const ProgressBar = () => {
     return (
         <div className='container container-bar'>
             <h1 className='title'>Uploading...</h1>
-            <div class="loader">
-                <div class="loaderBar"></div>
+            <div className="loader">
+                <div className="loaderBar"></div>
             </div>
         </div>
     )
